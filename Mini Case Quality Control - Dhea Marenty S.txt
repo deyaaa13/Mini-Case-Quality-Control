@@ -1,0 +1,172 @@
+Mini Case: Pengujian Sistem Pemesanan Online
+1. Identifikasi Test Case:
+       Buat 5-7 test case untuk fitur pemesanan makanan berdasarkan alur di atas. Sertakan:
+? Tujuan pengujian.
+? Langkah-langkah uji coba.
+? Data yang diperlukan (contoh: login user, metode pembayaran).
+? Hasil yang diharapkan.
+
+- Test Case 1 : Pemesanan Makanan menggunakan Akun baru
+? Tujuan: Memastikan pengguna baru dapat melakukan pemesanan dengan lancar dari awal hingga akhir
+? Langkah-langkah:
+1. Buka aplikasi FoodFast
+2. Klik menu daftar akun
+3. Masukkan Nama, Nomor Telefon, dan Password
+4. Klik tombol registrasi
+5. Klik menu Login
+6. Login menggunakan akun baru
+7. Klik tombol pencarian
+8. Mencari restoran yang diinginkan
+9. Pilih beberapa menu dan tambahkan ke dalam keranjang
+10. Klik tombol keranjang
+11. Tambahkan alamat
+12. Klik tombol metode pembayaran
+13. Pilih metode pembayaran
+14. Klik tombol pesan
+? Data:
+1. Data pengguna baru(nama, email, password)
+2. Data restoran 
+3. Data menu yang akan dipesan
+4. Data metode pembayaran
+? Hasil yang diharapkan:
+1. Proses pendaftaran akun baru berhasil
+2. Pengguna dapat login dengan lancar
+3. Hasil pencarian restoran sesuai dengan kata kunci
+4. Menu berhasil ditambahkan ke dalam keranjang
+5. Proses pemesanan makanan berjalan dengan baik
+6. Pengguna menerima notifikasi pesanan berhasil dibuat
+- Test Case 2 : Pemesanan menggunakan akun existing
+? Tujuan : memastikan pengguna yang sudah memiliki akun dapat melakukan pemesanan dengan cepat dan mudah
+? Langkah-langkah:
+1. Buka aplikasi FastFood
+2. Login menggunakan akun yang sudah ada
+3. Klik tombol pencarian
+4. Mencari restoran yang pernah dipesan sebelumnya
+5. Pilih beberapa menu yang pernah dipesan sebelumnya dan tambahkan ke dalam keranjang
+6. Klik tombol keranjang 
+7. Tambahkan alamat
+8. Klik tombol metode pembayaran
+9. Pilih metode pembayaran
+10. Klik tombol pesan
+? Data:
+1. Username dan password
+2. Data restoran yang pernah dikunjungi
+3. Data menu yang pernah dipesan
+4. Data metode pembayaran
+? Hasil yang diharapkan:
+1. Proses login berhasil
+2. Riwayat restoran sebelumnya muncul
+3. Proses pemesanan cepat dan mudah
+4. Pengguna menerima notifikasi pesanan berhasil
+- Test Case 3 : Pemesanan Makanan dengan Jumlah Item Banyak
+? Tujuan: Memastikan aplikasi dapat menangani pemesanan dengan jumlah item yang banyak tanpa terjadi error.
+? Langkah-langkah:
+1. Buka aplikasi FastFood
+2. Login menggunakan akun yang sudah ada
+3. Klik tombol pencarian
+4. Cari restoran dengan menu yang variatif
+5. Tambahkan banyak item makanan ke keranjang
+6. Klik tombol keranjang
+7. Tambahkan alamat
+8. Klik metode pembayaran
+9. Pilih metode pembayaran yang diinginkan
+10. Klik tombol pesan
+? Data:
+1. Username dan password
+2. Data restoran dengan menu yang variatif
+3. Data berbagai menu makanan
+4. Data metode pembayaran
+? Hasil yang diharapkan
+1. Semua item berhasil ditambahkan ke keranjang.
+2. Total harga terhitung dengan benar.
+3. Proses pemesanan berjalan lancar.
+4. Pengguna menerima notifikasi pesanan berhasil.
+- Test Case 4 : Pembatalan Pesanan
+? Tujuan: Memastikan pengguna dapat membatalkan pesanan sebelum pesanan diproses
+? Langkah-langkah:
+1. Buka aplikasi FastFood
+2. Login menggunakan akun yang sudah ada
+3. Klik tombol pencarian
+4. Mencari restoran yang pernah dipesan sebelumnya
+5. Pilih beberapa menu yang pernah dipesan sebelumnya dan tambahkan ke dalam keranjang
+6. Klik tombol keranjang 
+7. Tambahkan alamat
+8. Klik tombol metode pembayaran
+9. Pilih metode pembayaran
+10. Klik tombol pesan
+11. Buka menu pesanan
+12. Klik tombol batalkan pesanan
+? Data:
+1. Username dan Password
+2. Data pesanan yang akan dibatalkan
+? Hasil yang diharapkan:
+1. Pesanan berhasil dibatalkan.
+2. Pengguna menerima notifikasi pembatalan pesanan.
+- Test Case 5 : Pemesanan Makanan dengan saldo pembayaran yang kurang
+? Tujuan: Memastikan aplikasi dapat mendeteksi saldo yang kurang dan memberikan notifikasi kepada pengguna.
+? Langkah-langkah:
+1. Buka aplikasi FastFood
+2. Login menggunakan akun yang sudah ada
+3. Klik tombol pencarian
+4. Mencari restoran yang pernah dipesan sebelumnya
+5. Pilih beberapa menu yang pernah dipesan sebelumnya dan tambahkan ke dalam keranjang
+6. Klik tombol keranjang 
+7. Klik tombol metode pembayaran
+8. Pilih metode pembayaran
+9. Klik tombol pesan
+? Data:
+1. Username dan password
+2. Data pesanan
+3. Data metode pembayaran
+? Hasil yang diharapkan:
+1. Aplikasi memberikan peringatan bahwa saldo pembayaran kurang
+2. Pengguna tidak dapat melanjutkan proses pesanan sebelum saldo pembayaran sesuai dengan harga pesanan
+
+
+
+
+
+
+
+
+2. Analisis Potensi Bug:
+       Identifikasi 3 potensi bug yang mungkin terjadi dalam fitur ini, lengkap dengan penjelasan:
+? Penyebab bug.
+? Dampak bug pada pengguna.
+? Saran perbaikan.
+
+1. Bug : Gagal Login
+? Penyebab: 
+1. pengguna salah mengetik password 
+2. Koneksi internet tidak stabil
+3. Ada kesalahan pada sistem autentikasi
+? Dampak: Pengguna tidak dapat mengakses akun dan melakukan pemesanan
+? Saran perbaikan : 
+1. Membuat fitur lupa password
+2. Memberikan pesan error yang informatif, seperti “password salah” atau “koneksi internet tidak stabil”
+3. Memungkinkan pengguna untuk mencoba login kembali setelah beberapa saat
+4. Melakukan pengujian untuk memastikan sistem bekerja dengan baik dalam berbagai kondisi
+
+2. Bug : Item menu tidak ditampilkan
+? Penyebab: 
+1. Data menu tidak sesuai dengan yang dicari
+2. Terjadi gangguan pada koneksi antara aplikasi dan database yang menyimpan data menu
+? Dampak: Pengguna tidak dapat memilih makanan yang diinginkan sehingga tidak ingin melanjutkan proses pemesanan
+? Saran perbaikan : 
+1. Melakukan pemeriksaan data menu secara berkala untuk memastikan keakuratan dan kelengkapan
+
+3. Bug : Total harga tidak sesuai
+? Penyebab: 
+1. Terdapat kesalahan pada algoritma perhitungan total harga, misalnya diskon atau pajak yang tidak dihitung dengan benar.
+2. Harga produk yang tersimpan dalam database tidak sesuai dengan harga aktual.
+? Dampak: Pengguna merasa dirugikan jika total harga yang ditampilkan lebih tinggi dari seharusnya dan ragu untuk melanjutkan transaksi
+? Saran perbaikan : 
+1. Melakukan pengujian dengan berbagai kombinasi produk dan diskon untuk memastikan perhitungan harga akurat.
+2. Secara berkala memperbarui data harga produk agar sesuai dengan harga aktual.
+3. Menampilkan rincian pesanan secara jelas, termasuk harga satuan, jumlah, dan total harga setiap item
+
+
+
+3. Laporan Pengujian (Opsional jika Ada):
+https://docs.google.com/spreadsheets/d/1nz2aROQrujMappT8o2d43HEqQaO-f9EvsASrivMa3Zk/edit?usp=sharing 
+
